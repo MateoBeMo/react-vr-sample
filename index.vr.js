@@ -6,16 +6,22 @@ import {
   Text,
   View,
 } from 'react-vr';
+import West from './components/west';
+import East from './components/east';
+import North from './components/north';
+import South from './components/south';
+
+
 
 export default class react_vr_sample extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
+        <Pano source={asset('wood-world.jpg')}/>
         <Text
           style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
+            color: '#ffffff',
+            fontSize: 0.6,
             fontWeight: '400',
             layoutOrigin: [0.5, 0.5],
             paddingLeft: 0.2,
@@ -24,8 +30,12 @@ export default class react_vr_sample extends React.Component {
             textAlignVertical: 'center',
             transform: [{translate: [0, 0, -3]}],
           }}>
-          hello
+          You are here
         </Text>
+        <North></North>
+        <South></South>
+        <East></East>
+        <West></West>
       </View>
     );
   }
